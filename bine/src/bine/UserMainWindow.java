@@ -15,6 +15,7 @@ public class UserMainWindow extends javax.swing.JFrame {
      */
     public UserMainWindow() {
         initComponents();
+        ukryjPanele();
     }
 
     /**
@@ -35,6 +36,7 @@ public class UserMainWindow extends javax.swing.JFrame {
         usunWinoUzytkownikaButton = new javax.swing.JButton();
         dodajEdytujOpinieOWinieUseraButton = new javax.swing.JButton();
         szczegolyWinaUseraButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         piwaUzytkownikaPanel = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablicaPiwUzytkownika = new javax.swing.JTable();
@@ -43,28 +45,33 @@ public class UserMainWindow extends javax.swing.JFrame {
         dodajEdytujOpinieOPiwieUseraButton = new javax.swing.JButton();
         dodajPiwoUzytkownikaButton = new javax.swing.JButton();
         edytujPiwoUzytkownikaButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         winaGlobalnePanel = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablicaWinGlobalnych = new javax.swing.JTable();
         szczegolyWinaGlobalnegoButton = new javax.swing.JButton();
         dodajEdytujOpinieOWinieGlobalnymButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
         piwaGlobalnePanel = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablicaPiwGlobalnych = new javax.swing.JTable();
         szczegolyPiwaGlobalnegoButton = new javax.swing.JButton();
         dodajEdytujOpinieOPiwieGlobalnymButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
         opinieOWinachPanel = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         tablicaOpiniiOWinach = new javax.swing.JTable();
         szczegolyOpiniiOWinieButton = new javax.swing.JButton();
         usunOpinieOWinieButton = new javax.swing.JButton();
         edytujOpinieOWinieButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         opinieOPiwachPanel = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         tablicaOpiniiOPiwach = new javax.swing.JTable();
         edytujOpinieOPiwieButton = new javax.swing.JButton();
         szczegolyOpiniiOPiwieButton = new javax.swing.JButton();
         usunOpinieOWinieButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         belkaMenu = new javax.swing.JMenuBar();
         plikMenu = new javax.swing.JMenu();
         wylogujMenuItem = new javax.swing.JMenuItem();
@@ -118,6 +125,9 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         szczegolyWinaUseraButton.setText("Wyświetl szczegóły");
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel1.setText("Lista twoich win");
+
         javax.swing.GroupLayout winaUzytkownikaPanelLayout = new javax.swing.GroupLayout(winaUzytkownikaPanel);
         winaUzytkownikaPanel.setLayout(winaUzytkownikaPanelLayout);
         winaUzytkownikaPanelLayout.setHorizontalGroup(
@@ -125,31 +135,37 @@ public class UserMainWindow extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
             .addGroup(winaUzytkownikaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(dodajWinoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(dodajEdytujOpinieOWinieUseraButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(edytujWinoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                    .addComponent(usunWinoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(szczegolyWinaUseraButton)
+                .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(winaUzytkownikaPanelLayout.createSequentialGroup()
+                        .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(dodajWinoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dodajEdytujOpinieOWinieUseraButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(edytujWinoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                            .addComponent(usunWinoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(szczegolyWinaUseraButton))
+                    .addComponent(jLabel1))
                 .addContainerGap())
         );
         winaUzytkownikaPanelLayout.setVerticalGroup(
             winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(winaUzytkownikaPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(szczegolyWinaUseraButton)
+                    .addComponent(edytujWinoUzytkownikaButton)
+                    .addComponent(dodajWinoUzytkownikaButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dodajWinoUzytkownikaButton)
-                    .addComponent(edytujWinoUzytkownikaButton)
-                    .addComponent(szczegolyWinaUseraButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dodajEdytujOpinieOWinieUseraButton)
-                    .addComponent(usunWinoUzytkownikaButton))
-                .addContainerGap())
+                    .addComponent(usunWinoUzytkownikaButton)
+                    .addComponent(dodajEdytujOpinieOWinieUseraButton))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         winaUzytkownikaPanel.setBounds(0, 0, 705, 345);
@@ -187,6 +203,9 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         edytujPiwoUzytkownikaButton.setText("Edytuj");
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel2.setText("Lista twoich piw");
+
         javax.swing.GroupLayout piwaUzytkownikaPanelLayout = new javax.swing.GroupLayout(piwaUzytkownikaPanel);
         piwaUzytkownikaPanel.setLayout(piwaUzytkownikaPanelLayout);
         piwaUzytkownikaPanelLayout.setHorizontalGroup(
@@ -194,31 +213,37 @@ public class UserMainWindow extends javax.swing.JFrame {
             .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
             .addGroup(piwaUzytkownikaPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(dodajPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(dodajEdytujOpinieOPiwieUseraButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(edytujPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
-                    .addComponent(usunPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addComponent(szczegolyPiwaUseraButton)
+                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(piwaUzytkownikaPanelLayout.createSequentialGroup()
+                        .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(dodajPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dodajEdytujOpinieOPiwieUseraButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(edytujPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                            .addComponent(usunPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(szczegolyPiwaUseraButton))
+                    .addComponent(jLabel2))
                 .addContainerGap())
         );
         piwaUzytkownikaPanelLayout.setVerticalGroup(
             piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(piwaUzytkownikaPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(11, 11, 11)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(10, 10, 10)
                 .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dodajPiwoUzytkownikaButton)
+                    .addComponent(szczegolyPiwaUseraButton)
                     .addComponent(edytujPiwoUzytkownikaButton)
-                    .addComponent(szczegolyPiwaUseraButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                    .addComponent(dodajPiwoUzytkownikaButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dodajEdytujOpinieOPiwieUseraButton)
-                    .addComponent(usunPiwoUzytkownikaButton))
-                .addContainerGap())
+                    .addComponent(usunPiwoUzytkownikaButton)
+                    .addComponent(dodajEdytujOpinieOPiwieUseraButton))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         piwaUzytkownikaPanel.setBounds(0, 0, 705, 345);
@@ -250,6 +275,9 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         dodajEdytujOpinieOWinieGlobalnymButton.setText("Dodaj opinię");
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel3.setText("Lista win w globalnej bazie");
+
         javax.swing.GroupLayout winaGlobalnePanelLayout = new javax.swing.GroupLayout(winaGlobalnePanel);
         winaGlobalnePanel.setLayout(winaGlobalnePanelLayout);
         winaGlobalnePanelLayout.setHorizontalGroup(
@@ -257,20 +285,26 @@ public class UserMainWindow extends javax.swing.JFrame {
             .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
             .addGroup(winaGlobalnePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(dodajEdytujOpinieOWinieGlobalnymButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(szczegolyWinaGlobalnegoButton)
+                .addGroup(winaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addGroup(winaGlobalnePanelLayout.createSequentialGroup()
+                        .addComponent(dodajEdytujOpinieOWinieGlobalnymButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(szczegolyWinaGlobalnegoButton)))
                 .addContainerGap())
         );
         winaGlobalnePanelLayout.setVerticalGroup(
             winaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(winaGlobalnePanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(winaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(szczegolyWinaGlobalnegoButton)
-                    .addComponent(dodajEdytujOpinieOWinieGlobalnymButton))
-                .addContainerGap(43, Short.MAX_VALUE))
+                    .addComponent(dodajEdytujOpinieOWinieGlobalnymButton)
+                    .addComponent(szczegolyWinaGlobalnegoButton))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         winaGlobalnePanel.setBounds(0, 0, 705, 345);
@@ -302,27 +336,36 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         dodajEdytujOpinieOPiwieGlobalnymButton.setText("Dodaj opinię");
 
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel4.setText("Lista piw w globalnej bazie");
+
         javax.swing.GroupLayout piwaGlobalnePanelLayout = new javax.swing.GroupLayout(piwaGlobalnePanel);
         piwaGlobalnePanel.setLayout(piwaGlobalnePanelLayout);
         piwaGlobalnePanelLayout.setHorizontalGroup(
             piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
             .addGroup(piwaGlobalnePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(dodajEdytujOpinieOPiwieGlobalnymButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(szczegolyPiwaGlobalnegoButton)
-                .addContainerGap(437, Short.MAX_VALUE))
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
+                .addGroup(piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(piwaGlobalnePanelLayout.createSequentialGroup()
+                        .addComponent(dodajEdytujOpinieOPiwieGlobalnymButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(szczegolyPiwaGlobalnegoButton))
+                    .addComponent(jLabel4))
+                .addContainerGap())
         );
         piwaGlobalnePanelLayout.setVerticalGroup(
             piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(piwaGlobalnePanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(szczegolyPiwaGlobalnegoButton)
                     .addComponent(dodajEdytujOpinieOPiwieGlobalnymButton))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         piwaGlobalnePanel.setBounds(0, 0, 705, 345);
@@ -357,6 +400,9 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         edytujOpinieOWinieButton.setText("Edytuj");
 
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel5.setText("Lista twoich opinii o winach");
+
         javax.swing.GroupLayout opinieOWinachPanelLayout = new javax.swing.GroupLayout(opinieOWinachPanel);
         opinieOWinachPanel.setLayout(opinieOWinachPanelLayout);
         opinieOWinachPanelLayout.setHorizontalGroup(
@@ -364,23 +410,29 @@ public class UserMainWindow extends javax.swing.JFrame {
             .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
             .addGroup(opinieOWinachPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(szczegolyOpiniiOWinieButton)
-                .addGap(18, 18, 18)
-                .addComponent(edytujOpinieOWinieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(usunOpinieOWinieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(opinieOWinachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(opinieOWinachPanelLayout.createSequentialGroup()
+                        .addComponent(szczegolyOpiniiOWinieButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(edytujOpinieOWinieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(usunOpinieOWinieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5))
                 .addContainerGap())
         );
         opinieOWinachPanelLayout.setVerticalGroup(
             opinieOWinachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(opinieOWinachPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(6, 6, 6)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(opinieOWinachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(szczegolyOpiniiOWinieButton)
                     .addComponent(edytujOpinieOWinieButton)
                     .addComponent(usunOpinieOWinieButton))
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         opinieOWinachPanel.setBounds(0, 0, 705, 345);
@@ -414,6 +466,9 @@ public class UserMainWindow extends javax.swing.JFrame {
 
         usunOpinieOWinieButton1.setText("Usuń");
 
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        jLabel6.setText("Lista twoich opinii o piwach");
+
         javax.swing.GroupLayout opinieOPiwachPanelLayout = new javax.swing.GroupLayout(opinieOPiwachPanel);
         opinieOPiwachPanel.setLayout(opinieOPiwachPanelLayout);
         opinieOPiwachPanelLayout.setHorizontalGroup(
@@ -421,23 +476,29 @@ public class UserMainWindow extends javax.swing.JFrame {
             .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
             .addGroup(opinieOPiwachPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(szczegolyOpiniiOPiwieButton)
-                .addGap(18, 18, 18)
-                .addComponent(edytujOpinieOPiwieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(usunOpinieOWinieButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(opinieOPiwachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(opinieOPiwachPanelLayout.createSequentialGroup()
+                        .addComponent(szczegolyOpiniiOPiwieButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(edytujOpinieOPiwieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(usunOpinieOWinieButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel6))
                 .addContainerGap())
         );
         opinieOPiwachPanelLayout.setVerticalGroup(
             opinieOPiwachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(opinieOPiwachPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(opinieOPiwachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(szczegolyOpiniiOPiwieButton)
+                    .addComponent(usunOpinieOWinieButton1)
                     .addComponent(edytujOpinieOPiwieButton)
-                    .addComponent(usunOpinieOWinieButton1))
-                .addContainerGap(45, Short.MAX_VALUE))
+                    .addComponent(szczegolyOpiniiOPiwieButton))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         opinieOPiwachPanel.setBounds(0, 0, 705, 345);
@@ -479,21 +540,51 @@ public class UserMainWindow extends javax.swing.JFrame {
         wyswietlMenu.setText("Wyświetl");
 
         twojeWinaMenuItem.setText("Twoje wina");
+        twojeWinaMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                twojeWinaMenuItemActionPerformed(evt);
+            }
+        });
         wyswietlMenu.add(twojeWinaMenuItem);
 
         twojePiwaMenuItem.setText("Twoje piwa");
+        twojePiwaMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                twojePiwaMenuItemActionPerformed(evt);
+            }
+        });
         wyswietlMenu.add(twojePiwaMenuItem);
 
         winaMenuItem.setText("Wina z bazy ogólnej");
+        winaMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                winaMenuItemActionPerformed(evt);
+            }
+        });
         wyswietlMenu.add(winaMenuItem);
 
         piwaMenuItem.setText("Piwa z bazy ogólnej");
+        piwaMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                piwaMenuItemActionPerformed(evt);
+            }
+        });
         wyswietlMenu.add(piwaMenuItem);
 
         oWinachMenuItem.setText("Opinie o winach");
+        oWinachMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oWinachMenuItemActionPerformed(evt);
+            }
+        });
         wyswietlMenu.add(oWinachMenuItem);
 
         oPiwachMenuItem.setText("Opinie o piwach");
+        oPiwachMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                oPiwachMenuItemActionPerformed(evt);
+            }
+        });
         wyswietlMenu.add(oPiwachMenuItem);
 
         belkaMenu.add(wyswietlMenu);
@@ -533,9 +624,45 @@ public class UserMainWindow extends javax.swing.JFrame {
 
     private void wylogujMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wylogujMenuItemActionPerformed
         Logowanie logowanie = new Logowanie();
-        logowanie.show();
+        logowanie.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_wylogujMenuItemActionPerformed
+
+    private void twojeWinaMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twojeWinaMenuItemActionPerformed
+        ukryjPanele();
+        winaUzytkownikaPanel.setVisible(true);
+        kontenerWarstw.moveToFront(winaUzytkownikaPanel);
+    }//GEN-LAST:event_twojeWinaMenuItemActionPerformed
+
+    private void twojePiwaMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twojePiwaMenuItemActionPerformed
+        ukryjPanele();
+        piwaUzytkownikaPanel.setVisible(true);
+        kontenerWarstw.moveToFront(piwaUzytkownikaPanel);
+    }//GEN-LAST:event_twojePiwaMenuItemActionPerformed
+
+    private void winaMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_winaMenuItemActionPerformed
+        ukryjPanele();
+        winaGlobalnePanel.setVisible(true);
+        kontenerWarstw.moveToFront(winaGlobalnePanel);
+    }//GEN-LAST:event_winaMenuItemActionPerformed
+
+    private void piwaMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_piwaMenuItemActionPerformed
+        ukryjPanele();
+        piwaGlobalnePanel.setVisible(true);
+        kontenerWarstw.moveToFront(piwaGlobalnePanel);
+    }//GEN-LAST:event_piwaMenuItemActionPerformed
+
+    private void oWinachMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oWinachMenuItemActionPerformed
+        ukryjPanele();
+        opinieOWinachPanel.setVisible(true);
+        kontenerWarstw.moveToFront(opinieOWinachPanel);
+    }//GEN-LAST:event_oWinachMenuItemActionPerformed
+
+    private void oPiwachMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oPiwachMenuItemActionPerformed
+        ukryjPanele();
+        opinieOPiwachPanel.setVisible(true);
+        kontenerWarstw.moveToFront(opinieOPiwachPanel);
+    }//GEN-LAST:event_oPiwachMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -593,6 +720,12 @@ public class UserMainWindow extends javax.swing.JFrame {
     private javax.swing.JButton edytujOpinieOWinieButton;
     private javax.swing.JButton edytujPiwoUzytkownikaButton;
     private javax.swing.JButton edytujWinoUzytkownikaButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -636,4 +769,14 @@ public class UserMainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem wyszukajMenuItem;
     private javax.swing.JMenuItem zamknijMenuItem;
     // End of variables declaration//GEN-END:variables
+    //###########Metody pomocnicze##############
+    public void ukryjPanele()
+    {
+        piwaUzytkownikaPanel.setVisible(false);
+        winaUzytkownikaPanel.setVisible(false);
+        piwaGlobalnePanel.setVisible(false);
+        winaGlobalnePanel.setVisible(false);
+        opinieOPiwachPanel.setVisible(false);
+        opinieOWinachPanel.setVisible(false);
+    }
 }

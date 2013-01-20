@@ -15,6 +15,6 @@ public class Bine {
      */
     public static void main(String[] args) {
         Logowanie okno = new Logowanie();
-        okno.show();
+        okno.setVisible(true);
     }
 }

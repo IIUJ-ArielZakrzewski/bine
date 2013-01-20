@@ -16,6 +16,7 @@ public class Rejestrowanie extends javax.swing.JDialog {
     public Rejestrowanie(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        errorLabel.setVisible(false);
     }
 
     /**
@@ -107,9 +108,19 @@ public class Rejestrowanie extends javax.swing.JDialog {
 
         zarejestrujButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         zarejestrujButton.setText("Zarejestruj!");
+        zarejestrujButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                zarejestrujButtonActionPerformed(evt);
+            }
+        });
 
         clearButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         clearButton.setText("Wyczyść pola");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -248,6 +259,29 @@ public class Rejestrowanie extends javax.swing.JDialog {
     private void anulujButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_anulujButtonMouseClicked
         this.dispose();
     }//GEN-LAST:event_anulujButtonMouseClicked
+
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+        nameTextField.setText("");
+        surnameTextField.setText("");
+        loginTextField.setText("");
+        passwordPasswordField.setText("");
+        passwordConfirmPasswordField.setText("");
+        mailTextField.setText("");
+        mailConfirmTextField.setText("");
+        cityTextField.setText("");
+        postTextField.setText("");
+        streetTextField.setText("");
+        houseTextField.setText("");
+        lokalTextField.setText("");
+    }//GEN-LAST:event_clearButtonActionPerformed
+
+    private void zarejestrujButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zarejestrujButtonActionPerformed
+        Logowanie okno = new Logowanie();
+        okno.setVisible(true);
+        this.dispose();
+        
+        //################DO MODYFIKACJII######################
+    }//GEN-LAST:event_zarejestrujButtonActionPerformed
 
     /**
      * @param args the command line arguments

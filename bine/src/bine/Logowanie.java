@@ -15,6 +15,7 @@ public class Logowanie extends javax.swing.JFrame {
      */
     public Logowanie() {
         initComponents();
+        errorLabel.setVisible(false);
     }
 
     /**
@@ -127,13 +128,15 @@ public class Logowanie extends javax.swing.JFrame {
 
     private void rejestracjaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rejestracjaButtonMouseClicked
         Rejestrowanie register = new Rejestrowanie(this, true);
-        register.show();
+        register.setVisible(true);
     }//GEN-LAST:event_rejestracjaButtonMouseClicked
 
     private void logowanieButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logowanieButtonMouseClicked
         UserMainWindow okno = new UserMainWindow();
         this.dispose();
-        okno.show();
+        okno.setVisible(true);
+        
+        //################DO MODYFIKACJII######################
     }//GEN-LAST:event_logowanieButtonMouseClicked
 
     /**
