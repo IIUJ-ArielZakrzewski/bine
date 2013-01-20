@@ -58,6 +58,11 @@ public class Logowanie extends javax.swing.JFrame {
 
         logowanieButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         logowanieButton.setText("Zaloguj");
+        logowanieButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logowanieButtonMouseClicked(evt);
+            }
+        });
 
         errorLabel.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
         errorLabel.setForeground(new java.awt.Color(255, 51, 51));
@@ -124,6 +129,12 @@ public class Logowanie extends javax.swing.JFrame {
         Rejestrowanie register = new Rejestrowanie(this, true);
         register.show();
     }//GEN-LAST:event_rejestracjaButtonMouseClicked
+
+    private void logowanieButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logowanieButtonMouseClicked
+        MainWindow okno = new MainWindow();
+        this.dispose();
+        okno.show();
+    }//GEN-LAST:event_logowanieButtonMouseClicked
 
     /**
      * @param args the command line arguments
