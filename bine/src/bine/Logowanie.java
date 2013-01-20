@@ -27,19 +27,17 @@ public class Logowanie extends javax.swing.JFrame {
     private void initComponents() {
 
         loginTextField = new javax.swing.JTextField();
-        passwordTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         rejestracjaButton = new javax.swing.JButton();
         logowanieButton = new javax.swing.JButton();
         errorLabel = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         loginTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-
-        passwordTextField.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel1.setText("Login:");
@@ -52,6 +50,11 @@ public class Logowanie extends javax.swing.JFrame {
 
         rejestracjaButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         rejestracjaButton.setText("Rejestracja");
+        rejestracjaButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                rejestracjaButtonMouseClicked(evt);
+            }
+        });
 
         logowanieButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         logowanieButton.setText("Zaloguj");
@@ -59,6 +62,8 @@ public class Logowanie extends javax.swing.JFrame {
         errorLabel.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
         errorLabel.setForeground(new java.awt.Color(255, 51, 51));
         errorLabel.setText("errorLabel");
+
+        jPasswordField1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,7 +76,7 @@ public class Logowanie extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(rejestracjaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 158, Short.MAX_VALUE)
                 .addComponent(logowanieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
             .addGroup(layout.createSequentialGroup()
@@ -83,8 +88,8 @@ public class Logowanie extends javax.swing.JFrame {
                             .addComponent(jLabel1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(loginTextField)
-                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(loginTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                            .addComponent(jPasswordField1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(errorLabel)))
@@ -100,9 +105,9 @@ public class Logowanie extends javax.swing.JFrame {
                     .addComponent(loginTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addComponent(errorLabel)
                 .addGap(18, 18, 18)
@@ -114,6 +119,11 @@ public class Logowanie extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void rejestracjaButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rejestracjaButtonMouseClicked
+        Rejestrowanie register = new Rejestrowanie(this, true);
+        register.show();
+    }//GEN-LAST:event_rejestracjaButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -161,9 +171,9 @@ public class Logowanie extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField loginTextField;
     private javax.swing.JButton logowanieButton;
-    private javax.swing.JTextField passwordTextField;
     private javax.swing.JButton rejestracjaButton;
     // End of variables declaration//GEN-END:variables
 }
