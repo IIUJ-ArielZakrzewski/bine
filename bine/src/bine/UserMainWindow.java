@@ -35,7 +35,14 @@ public class UserMainWindow extends javax.swing.JFrame {
         usunWinoUzytkownikaButton = new javax.swing.JButton();
         dodajEdytujOpinieOWinieUseraButton = new javax.swing.JButton();
         szczegolyWinaUseraButton = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        piwaUzytkownikaPanel = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tablicaPiwUzytkownika = new javax.swing.JTable();
+        szczegolyPiwaUseraButton = new javax.swing.JButton();
+        usunPiwoUzytkownikaButton = new javax.swing.JButton();
+        dodajEdytujOpinieOPiwieUseraButton = new javax.swing.JButton();
+        dodajPiwoUzytkownikaButton = new javax.swing.JButton();
+        edytujPiwoUzytkownikaButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -72,7 +79,7 @@ public class UserMainWindow extends javax.swing.JFrame {
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, true, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -130,19 +137,74 @@ public class UserMainWindow extends javax.swing.JFrame {
         winaUzytkownikaPanel.setBounds(0, 0, 705, 345);
         kontenerWarstw.add(winaUzytkownikaPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+        tablicaPiwUzytkownika.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nazwa", "Browar", "Kraj pochodzenia", "Rodzaj piwa"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane2.setViewportView(tablicaPiwUzytkownika);
+        tablicaPiwUzytkownika.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        szczegolyPiwaUseraButton.setText("Wyświetl szczegóły");
+
+        usunPiwoUzytkownikaButton.setText("Usuń");
+
+        dodajEdytujOpinieOPiwieUseraButton.setText("Dodaj opinię");
+
+        dodajPiwoUzytkownikaButton.setText("Dodaj nowe piwo");
+
+        edytujPiwoUzytkownikaButton.setText("Edytuj");
+
+        javax.swing.GroupLayout piwaUzytkownikaPanelLayout = new javax.swing.GroupLayout(piwaUzytkownikaPanel);
+        piwaUzytkownikaPanel.setLayout(piwaUzytkownikaPanelLayout);
+        piwaUzytkownikaPanelLayout.setHorizontalGroup(
+            piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
+            .addGroup(piwaUzytkownikaPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dodajPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dodajEdytujOpinieOPiwieUseraButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(edytujPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE)
+                    .addComponent(usunPiwoUzytkownikaButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(szczegolyPiwaUseraButton)
+                .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 345, Short.MAX_VALUE)
+        piwaUzytkownikaPanelLayout.setVerticalGroup(
+            piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(piwaUzytkownikaPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dodajPiwoUzytkownikaButton)
+                    .addComponent(edytujPiwoUzytkownikaButton)
+                    .addComponent(szczegolyPiwaUseraButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dodajEdytujOpinieOPiwieUseraButton)
+                    .addComponent(usunPiwoUzytkownikaButton))
+                .addContainerGap())
         );
 
-        jPanel2.setBounds(0, 0, 705, 345);
-        kontenerWarstw.add(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        piwaUzytkownikaPanel.setBounds(0, 0, 705, 345);
+        kontenerWarstw.add(piwaUzytkownikaPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -337,29 +399,36 @@ public class UserMainWindow extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar belkaMenu;
+    private javax.swing.JButton dodajEdytujOpinieOPiwieUseraButton;
     private javax.swing.JButton dodajEdytujOpinieOWinieUseraButton;
     private javax.swing.JMenuItem dodajPiwoMenuItem;
+    private javax.swing.JButton dodajPiwoUzytkownikaButton;
     private javax.swing.JMenuItem dodajWinoMenuItem;
     private javax.swing.JButton dodajWinoUzytkownikaButton;
     private javax.swing.JMenu edycjaMenu;
+    private javax.swing.JButton edytujPiwoUzytkownikaButton;
     private javax.swing.JButton edytujWinoUzytkownikaButton;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLayeredPane kontenerWarstw;
     private javax.swing.JMenuItem oPiwachMenuItem;
     private javax.swing.JMenu oProgramieMenu;
     private javax.swing.JMenuItem oWinachMenuItem;
     private javax.swing.JMenuItem piwaMenuItem;
+    private javax.swing.JPanel piwaUzytkownikaPanel;
     private javax.swing.JMenu plikMenu;
     private javax.swing.JMenuItem pomocMenuItem;
+    private javax.swing.JButton szczegolyPiwaUseraButton;
     private javax.swing.JButton szczegolyWinaUseraButton;
+    private javax.swing.JTable tablicaPiwUzytkownika;
     private javax.swing.JTable tablicaWinUzytkownika;
     private javax.swing.JMenuItem twojePiwaMenuItem;
     private javax.swing.JMenuItem twojeWinaMenuItem;
+    private javax.swing.JButton usunPiwoUzytkownikaButton;
     private javax.swing.JButton usunWinoUzytkownikaButton;
     private javax.swing.JMenuItem winaMenuItem;
     private javax.swing.JPanel winaUzytkownikaPanel;
