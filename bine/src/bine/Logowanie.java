@@ -131,7 +131,7 @@ public class Logowanie extends javax.swing.JFrame {
     }//GEN-LAST:event_rejestracjaButtonMouseClicked
 
     private void logowanieButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logowanieButtonMouseClicked
-        MainWindow okno = new MainWindow();
+        UserMainWindow okno = new UserMainWindow();
         this.dispose();
         okno.show();
     }//GEN-LAST:event_logowanieButtonMouseClicked
