@@ -53,8 +53,18 @@ public class UserMainWindow extends javax.swing.JFrame {
         tablicaPiwGlobalnych = new javax.swing.JTable();
         szczegolyPiwaGlobalnegoButton = new javax.swing.JButton();
         dodajEdytujOpinieOPiwieGlobalnymButton = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
+        opinieOWinachPanel = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        tablicaOpiniiOWinach = new javax.swing.JTable();
+        szczegolyOpiniiOWinieButton = new javax.swing.JButton();
+        usunOpinieOWinieButton = new javax.swing.JButton();
+        edytujOpinieOWinieButton = new javax.swing.JButton();
+        opinieOPiwachPanel = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        tablicaOpiniiOPiwach = new javax.swing.JTable();
+        edytujOpinieOPiwieButton = new javax.swing.JButton();
+        szczegolyOpiniiOPiwieButton = new javax.swing.JButton();
+        usunOpinieOWinieButton1 = new javax.swing.JButton();
         belkaMenu = new javax.swing.JMenuBar();
         plikMenu = new javax.swing.JMenu();
         wylogujMenuItem = new javax.swing.JMenuItem();
@@ -298,21 +308,17 @@ public class UserMainWindow extends javax.swing.JFrame {
             piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(piwaGlobalnePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(piwaGlobalnePanelLayout.createSequentialGroup()
-                        .addComponent(dodajEdytujOpinieOPiwieGlobalnymButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(szczegolyPiwaGlobalnegoButton)
-                        .addGap(0, 427, Short.MAX_VALUE))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE))
-                .addContainerGap())
+                .addComponent(dodajEdytujOpinieOPiwieGlobalnymButton, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(szczegolyPiwaGlobalnegoButton)
+                .addContainerGap(437, Short.MAX_VALUE))
+            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
         );
         piwaGlobalnePanelLayout.setVerticalGroup(
             piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(piwaGlobalnePanelLayout.createSequentialGroup()
-                .addGap(5, 5, 5)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(11, 11, 11)
                 .addGroup(piwaGlobalnePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(szczegolyPiwaGlobalnegoButton)
                     .addComponent(dodajEdytujOpinieOPiwieGlobalnymButton))
@@ -322,33 +328,120 @@ public class UserMainWindow extends javax.swing.JFrame {
         piwaGlobalnePanel.setBounds(0, 0, 705, 345);
         kontenerWarstw.add(piwaGlobalnePanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+        tablicaOpiniiOWinach.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Nazwa", "Kwasowość", "Taniczność", "Ocena"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tablicaOpiniiOWinach.setColumnSelectionAllowed(true);
+        jScrollPane5.setViewportView(tablicaOpiniiOWinach);
+        tablicaOpiniiOWinach.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        szczegolyOpiniiOWinieButton.setText("Wyświetl szczegóły");
+
+        usunOpinieOWinieButton.setText("Usuń");
+
+        edytujOpinieOWinieButton.setText("Edytuj");
+
+        javax.swing.GroupLayout opinieOWinachPanelLayout = new javax.swing.GroupLayout(opinieOWinachPanel);
+        opinieOWinachPanel.setLayout(opinieOWinachPanelLayout);
+        opinieOWinachPanelLayout.setHorizontalGroup(
+            opinieOWinachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
+            .addGroup(opinieOWinachPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(szczegolyOpiniiOWinieButton)
+                .addGap(18, 18, 18)
+                .addComponent(edytujOpinieOWinieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(usunOpinieOWinieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 345, Short.MAX_VALUE)
+        opinieOWinachPanelLayout.setVerticalGroup(
+            opinieOWinachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(opinieOWinachPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(opinieOWinachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(szczegolyOpiniiOWinieButton)
+                    .addComponent(edytujOpinieOWinieButton)
+                    .addComponent(usunOpinieOWinieButton))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        jPanel5.setBounds(0, 0, 705, 345);
-        kontenerWarstw.add(jPanel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        opinieOWinachPanel.setBounds(0, 0, 705, 345);
+        kontenerWarstw.add(opinieOWinachPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
+        tablicaOpiniiOPiwach.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Nazwa", "Kwasowość", "Cierpkość", "Słodycz", "Ocena"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane6.setViewportView(tablicaOpiniiOPiwach);
+        tablicaOpiniiOPiwach.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        edytujOpinieOPiwieButton.setText("Edytuj");
+
+        szczegolyOpiniiOPiwieButton.setText("Wyświetl szczegóły");
+
+        usunOpinieOWinieButton1.setText("Usuń");
+
+        javax.swing.GroupLayout opinieOPiwachPanelLayout = new javax.swing.GroupLayout(opinieOPiwachPanel);
+        opinieOPiwachPanel.setLayout(opinieOPiwachPanelLayout);
+        opinieOPiwachPanelLayout.setHorizontalGroup(
+            opinieOPiwachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 705, Short.MAX_VALUE)
+            .addGroup(opinieOPiwachPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(szczegolyOpiniiOPiwieButton)
+                .addGap(18, 18, 18)
+                .addComponent(edytujOpinieOPiwieButton, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(usunOpinieOWinieButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 345, Short.MAX_VALUE)
+        opinieOPiwachPanelLayout.setVerticalGroup(
+            opinieOPiwachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(opinieOPiwachPanelLayout.createSequentialGroup()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(opinieOPiwachPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(szczegolyOpiniiOPiwieButton)
+                    .addComponent(edytujOpinieOPiwieButton)
+                    .addComponent(usunOpinieOWinieButton1))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        jPanel6.setBounds(0, 0, 705, 345);
-        kontenerWarstw.add(jPanel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        opinieOPiwachPanel.setBounds(0, 0, 705, 345);
+        kontenerWarstw.add(opinieOPiwachPanel, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         plikMenu.setText("Plik");
 
@@ -496,33 +589,43 @@ public class UserMainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem dodajWinoMenuItem;
     private javax.swing.JButton dodajWinoUzytkownikaButton;
     private javax.swing.JMenu edycjaMenu;
+    private javax.swing.JButton edytujOpinieOPiwieButton;
+    private javax.swing.JButton edytujOpinieOWinieButton;
     private javax.swing.JButton edytujPiwoUzytkownikaButton;
     private javax.swing.JButton edytujWinoUzytkownikaButton;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JLayeredPane kontenerWarstw;
     private javax.swing.JMenuItem oPiwachMenuItem;
     private javax.swing.JMenu oProgramieMenu;
     private javax.swing.JMenuItem oWinachMenuItem;
+    private javax.swing.JPanel opinieOPiwachPanel;
+    private javax.swing.JPanel opinieOWinachPanel;
     private javax.swing.JPanel piwaGlobalnePanel;
     private javax.swing.JMenuItem piwaMenuItem;
     private javax.swing.JPanel piwaUzytkownikaPanel;
     private javax.swing.JMenu plikMenu;
     private javax.swing.JMenuItem pomocMenuItem;
+    private javax.swing.JButton szczegolyOpiniiOPiwieButton;
+    private javax.swing.JButton szczegolyOpiniiOWinieButton;
     private javax.swing.JButton szczegolyPiwaGlobalnegoButton;
     private javax.swing.JButton szczegolyPiwaUseraButton;
     private javax.swing.JButton szczegolyWinaGlobalnegoButton;
     private javax.swing.JButton szczegolyWinaUseraButton;
+    private javax.swing.JTable tablicaOpiniiOPiwach;
+    private javax.swing.JTable tablicaOpiniiOWinach;
     private javax.swing.JTable tablicaPiwGlobalnych;
     private javax.swing.JTable tablicaPiwUzytkownika;
     private javax.swing.JTable tablicaWinGlobalnych;
     private javax.swing.JTable tablicaWinUzytkownika;
     private javax.swing.JMenuItem twojePiwaMenuItem;
     private javax.swing.JMenuItem twojeWinaMenuItem;
+    private javax.swing.JButton usunOpinieOWinieButton;
+    private javax.swing.JButton usunOpinieOWinieButton1;
     private javax.swing.JButton usunPiwoUzytkownikaButton;
     private javax.swing.JButton usunWinoUzytkownikaButton;
     private javax.swing.JPanel winaGlobalnePanel;
