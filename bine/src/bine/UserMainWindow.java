@@ -123,12 +123,22 @@ public final class UserMainWindow extends javax.swing.JFrame {
         });
 
         edytujWinoUzytkownikaButton.setText("Edytuj");
+        edytujWinoUzytkownikaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edytujWinoUzytkownikaButtonActionPerformed(evt);
+            }
+        });
 
         usunWinoUzytkownikaButton.setText("Usuń");
 
         dodajEdytujOpinieOWinieUseraButton.setText("Dodaj opinię");
 
         szczegolyWinaUseraButton.setText("Wyświetl szczegóły");
+        szczegolyWinaUseraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                szczegolyWinaUseraButtonActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel1.setText("Lista twoich win");
@@ -280,6 +290,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         jScrollPane3.setViewportView(tablicaWinGlobalnych);
 
         szczegolyWinaGlobalnegoButton.setText("Wyświetl szczegóły");
+        szczegolyWinaGlobalnegoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                szczegolyWinaGlobalnegoButtonActionPerformed(evt);
+            }
+        });
 
         dodajEdytujOpinieOWinieGlobalnymButton.setText("Dodaj opinię");
 
@@ -697,6 +712,24 @@ public final class UserMainWindow extends javax.swing.JFrame {
         DodawaniePiwa okno = new DodawaniePiwa(this, true, false);
         okno.setVisible(true);
     }//GEN-LAST:event_dodajPiwoMenuItemActionPerformed
+
+    private void edytujWinoUzytkownikaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edytujWinoUzytkownikaButtonActionPerformed
+        SzczegolyWina okno = new SzczegolyWina(this, true, true);
+        okno.setVisible(true);
+        //################DO MODYFIKACJII######################
+    }//GEN-LAST:event_edytujWinoUzytkownikaButtonActionPerformed
+
+    private void szczegolyWinaUseraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_szczegolyWinaUseraButtonActionPerformed
+        SzczegolyWina okno = new SzczegolyWina(this, true, false);
+        okno.setVisible(true);
+        //################DO MODYFIKACJII######################
+    }//GEN-LAST:event_szczegolyWinaUseraButtonActionPerformed
+
+    private void szczegolyWinaGlobalnegoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_szczegolyWinaGlobalnegoButtonActionPerformed
+        SzczegolyWina okno = new SzczegolyWina(this, true, false);
+        okno.setVisible(true);
+        //################DO MODYFIKACJII######################
+    }//GEN-LAST:event_szczegolyWinaGlobalnegoButtonActionPerformed
 
     /**
      * @param args the command line arguments

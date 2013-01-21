@@ -292,6 +292,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edytuj"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edytujWinoUzytkownikaButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="usunWinoUzytkownikaButton">
               <Properties>
@@ -307,6 +310,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wy&#x15b;wietl szczeg&#xf3;&#x142;y"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="szczegolyWinaUseraButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
@@ -562,6 +568,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wy&#x15b;wietl szczeg&#xf3;&#x142;y"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="szczegolyWinaGlobalnegoButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="dodajEdytujOpinieOWinieGlobalnymButton">
               <Properties>
