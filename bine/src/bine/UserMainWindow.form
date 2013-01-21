@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="belkaMenu">
       <SubComponents>
@@ -36,6 +36,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj wino"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dodajWinoMenuItemActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="dodajPiwoMenuItem">
               <Properties>
@@ -214,7 +217,7 @@
                           <Component id="usunWinoUzytkownikaButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="dodajEdytujOpinieOWinieUseraButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <EmptySpace pref="13" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -279,6 +282,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj nowe wino"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dodajWinoUzytkownikaButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="edytujWinoUzytkownikaButton">
               <Properties>
@@ -361,7 +367,7 @@
                           <Component id="usunPiwoUzytkownikaButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="dodajEdytujOpinieOPiwieUseraButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="19" max="32767" attributes="0"/>
+                      <EmptySpace pref="13" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

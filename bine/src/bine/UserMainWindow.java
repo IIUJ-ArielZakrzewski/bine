@@ -116,6 +116,11 @@ public class UserMainWindow extends javax.swing.JFrame {
         tablicaWinUzytkownika.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         dodajWinoUzytkownikaButton.setText("Dodaj nowe wino");
+        dodajWinoUzytkownikaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajWinoUzytkownikaButtonActionPerformed(evt);
+            }
+        });
 
         edytujWinoUzytkownikaButton.setText("Edytuj");
 
@@ -165,7 +170,7 @@ public class UserMainWindow extends javax.swing.JFrame {
                 .addGroup(winaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usunWinoUzytkownikaButton)
                     .addComponent(dodajEdytujOpinieOWinieUseraButton))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         winaUzytkownikaPanel.setBounds(0, 0, 705, 345);
@@ -243,7 +248,7 @@ public class UserMainWindow extends javax.swing.JFrame {
                 .addGroup(piwaUzytkownikaPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usunPiwoUzytkownikaButton)
                     .addComponent(dodajEdytujOpinieOPiwieUseraButton))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
         piwaUzytkownikaPanel.setBounds(0, 0, 705, 345);
@@ -527,6 +532,11 @@ public class UserMainWindow extends javax.swing.JFrame {
         edycjaMenu.setText("Edycja");
 
         dodajWinoMenuItem.setText("Dodaj wino");
+        dodajWinoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajWinoMenuItemActionPerformed(evt);
+            }
+        });
         edycjaMenu.add(dodajWinoMenuItem);
 
         dodajPiwoMenuItem.setText("Dodaj piwo");
@@ -663,6 +673,16 @@ public class UserMainWindow extends javax.swing.JFrame {
         opinieOPiwachPanel.setVisible(true);
         kontenerWarstw.moveToFront(opinieOPiwachPanel);
     }//GEN-LAST:event_oPiwachMenuItemActionPerformed
+
+    private void dodajWinoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajWinoMenuItemActionPerformed
+        DodawanieWina okno = new DodawanieWina(this, true, false);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajWinoMenuItemActionPerformed
+
+    private void dodajWinoUzytkownikaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajWinoUzytkownikaButtonActionPerformed
+        DodawanieWina okno = new DodawanieWina(this, true, false);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajWinoUzytkownikaButtonActionPerformed
 
     /**
      * @param args the command line arguments
