@@ -8,7 +8,7 @@ package bine;
  *
  * @author Ariel
  */
-public class UserMainWindow extends javax.swing.JFrame {
+public final class UserMainWindow extends javax.swing.JFrame {
 
     /**
      * Creates new form UserMainWindow
@@ -16,6 +16,8 @@ public class UserMainWindow extends javax.swing.JFrame {
     public UserMainWindow() {
         initComponents();
         ukryjPanele();
+        winaUzytkownikaPanel.setVisible(true);
+        kontenerWarstw.moveToFront(winaUzytkownikaPanel);
     }
 
     /**
@@ -111,9 +113,7 @@ public class UserMainWindow extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablicaWinUzytkownika.setColumnSelectionAllowed(true);
         jScrollPane1.setViewportView(tablicaWinUzytkownika);
-        tablicaWinUzytkownika.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         dodajWinoUzytkownikaButton.setText("Dodaj nowe wino");
         dodajWinoUzytkownikaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +196,6 @@ public class UserMainWindow extends javax.swing.JFrame {
             }
         });
         jScrollPane2.setViewportView(tablicaPiwUzytkownika);
-        tablicaPiwUzytkownika.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         szczegolyPiwaUseraButton.setText("Wyświetl szczegóły");
 
@@ -205,6 +204,11 @@ public class UserMainWindow extends javax.swing.JFrame {
         dodajEdytujOpinieOPiwieUseraButton.setText("Dodaj opinię");
 
         dodajPiwoUzytkownikaButton.setText("Dodaj nowe piwo");
+        dodajPiwoUzytkownikaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajPiwoUzytkownikaButtonActionPerformed(evt);
+            }
+        });
 
         edytujPiwoUzytkownikaButton.setText("Edytuj");
 
@@ -274,7 +278,6 @@ public class UserMainWindow extends javax.swing.JFrame {
             }
         });
         jScrollPane3.setViewportView(tablicaWinGlobalnych);
-        tablicaWinGlobalnych.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         szczegolyWinaGlobalnegoButton.setText("Wyświetl szczegóły");
 
@@ -335,7 +338,6 @@ public class UserMainWindow extends javax.swing.JFrame {
             }
         });
         jScrollPane4.setViewportView(tablicaPiwGlobalnych);
-        tablicaPiwGlobalnych.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         szczegolyPiwaGlobalnegoButton.setText("Wyświetl szczegóły");
 
@@ -395,9 +397,7 @@ public class UserMainWindow extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablicaOpiniiOWinach.setColumnSelectionAllowed(true);
         jScrollPane5.setViewportView(tablicaOpiniiOWinach);
-        tablicaOpiniiOWinach.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         szczegolyOpiniiOWinieButton.setText("Wyświetl szczegóły");
 
@@ -463,7 +463,6 @@ public class UserMainWindow extends javax.swing.JFrame {
             }
         });
         jScrollPane6.setViewportView(tablicaOpiniiOPiwach);
-        tablicaOpiniiOPiwach.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         edytujOpinieOPiwieButton.setText("Edytuj");
 
@@ -540,6 +539,11 @@ public class UserMainWindow extends javax.swing.JFrame {
         edycjaMenu.add(dodajWinoMenuItem);
 
         dodajPiwoMenuItem.setText("Dodaj piwo");
+        dodajPiwoMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajPiwoMenuItemActionPerformed(evt);
+            }
+        });
         edycjaMenu.add(dodajPiwoMenuItem);
 
         wyszukajMenuItem.setText("Wyszukaj...");
@@ -683,6 +687,16 @@ public class UserMainWindow extends javax.swing.JFrame {
         DodawanieWina okno = new DodawanieWina(this, true, false);
         okno.setVisible(true);
     }//GEN-LAST:event_dodajWinoUzytkownikaButtonActionPerformed
+
+    private void dodajPiwoUzytkownikaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajPiwoUzytkownikaButtonActionPerformed
+        DodawaniePiwa okno = new DodawaniePiwa(this, true, false);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajPiwoUzytkownikaButtonActionPerformed
+
+    private void dodajPiwoMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajPiwoMenuItemActionPerformed
+        DodawaniePiwa okno = new DodawaniePiwa(this, true, false);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajPiwoMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
