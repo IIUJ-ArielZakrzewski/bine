@@ -305,6 +305,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj opini&#x119;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dodajEdytujOpinieOWinieUseraButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="szczegolyWinaUseraButton">
               <Properties>
@@ -582,6 +585,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj opini&#x119;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dodajEdytujOpinieOWinieGlobalnymButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
@@ -805,6 +811,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wy&#x15b;wietl szczeg&#xf3;&#x142;y"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="szczegolyOpiniiOWinieButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="usunOpinieOWinieButton">
               <Properties>
@@ -815,6 +824,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edytuj"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edytujOpinieOWinieButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>

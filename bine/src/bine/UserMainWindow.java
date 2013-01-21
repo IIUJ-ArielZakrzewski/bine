@@ -132,6 +132,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         usunWinoUzytkownikaButton.setText("Usuń");
 
         dodajEdytujOpinieOWinieUseraButton.setText("Dodaj opinię");
+        dodajEdytujOpinieOWinieUseraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajEdytujOpinieOWinieUseraButtonActionPerformed(evt);
+            }
+        });
 
         szczegolyWinaUseraButton.setText("Wyświetl szczegóły");
         szczegolyWinaUseraButton.addActionListener(new java.awt.event.ActionListener() {
@@ -307,6 +312,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         });
 
         dodajEdytujOpinieOWinieGlobalnymButton.setText("Dodaj opinię");
+        dodajEdytujOpinieOWinieGlobalnymButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajEdytujOpinieOWinieGlobalnymButtonActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel3.setText("Lista win w globalnej bazie");
@@ -430,10 +440,20 @@ public final class UserMainWindow extends javax.swing.JFrame {
         jScrollPane5.setViewportView(tablicaOpiniiOWinach);
 
         szczegolyOpiniiOWinieButton.setText("Wyświetl szczegóły");
+        szczegolyOpiniiOWinieButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                szczegolyOpiniiOWinieButtonActionPerformed(evt);
+            }
+        });
 
         usunOpinieOWinieButton.setText("Usuń");
 
         edytujOpinieOWinieButton.setText("Edytuj");
+        edytujOpinieOWinieButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edytujOpinieOWinieButtonActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel5.setText("Lista twoich opinii o winach");
@@ -760,6 +780,26 @@ public final class UserMainWindow extends javax.swing.JFrame {
         SzczegolyPiwa okno = new SzczegolyPiwa(this, true, false);
         okno.setVisible(true);
     }//GEN-LAST:event_szczegolyPiwaGlobalnegoButtonActionPerformed
+
+    private void dodajEdytujOpinieOWinieUseraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajEdytujOpinieOWinieUseraButtonActionPerformed
+        AddEditViewOpiniaWino okno = new AddEditViewOpiniaWino(this, true, 0);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajEdytujOpinieOWinieUseraButtonActionPerformed
+
+    private void dodajEdytujOpinieOWinieGlobalnymButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajEdytujOpinieOWinieGlobalnymButtonActionPerformed
+        AddEditViewOpiniaWino okno = new AddEditViewOpiniaWino(this, true, 0);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajEdytujOpinieOWinieGlobalnymButtonActionPerformed
+
+    private void szczegolyOpiniiOWinieButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_szczegolyOpiniiOWinieButtonActionPerformed
+        AddEditViewOpiniaWino okno = new AddEditViewOpiniaWino(this, true, 2);
+        okno.setVisible(true);
+    }//GEN-LAST:event_szczegolyOpiniiOWinieButtonActionPerformed
+
+    private void edytujOpinieOWinieButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edytujOpinieOWinieButtonActionPerformed
+        AddEditViewOpiniaWino okno = new AddEditViewOpiniaWino(this, true, 1);
+        okno.setVisible(true);
+    }//GEN-LAST:event_edytujOpinieOWinieButtonActionPerformed
 
     /**
      * @param args the command line arguments
