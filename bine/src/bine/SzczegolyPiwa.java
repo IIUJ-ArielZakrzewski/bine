@@ -8,45 +8,41 @@ package bine;
  *
  * @author Ariel
  */
-public class SzczegolyWina extends javax.swing.JDialog {
+public class SzczegolyPiwa extends javax.swing.JDialog {
 
     /**
      * Creates new form DodawanieWina
      */
-    public SzczegolyWina(java.awt.Frame parent, boolean modal, boolean edycja) {
+    public SzczegolyPiwa(java.awt.Frame parent, boolean modal, boolean edycja) {
         super(parent, modal);
         initComponents();
         errorLabel.setVisible(false);
         if(!edycja)
         {
-            jLabel11.setText("Informacje o winie");
+            jLabel11.setText("Informacje o piwie");
             jLabel1.setText("Nazwa:");
-            jLabel2.setText("Rocznik:");
-            jLabel3.setText("Kraj pochodzena:");
-            jLabel4.setText("Rodzaj wina:");
+            jLabel2.setText("Browar:");
+            jLabel3.setText("Kraj pochodzenia:");
+            jLabel4.setText("Rodzaj piwa:");
             jLabel14.setVisible(false);
             wyczyscButton.setVisible(false);
             zatwierdzButton.setVisible(false);
             anulujButton.setText("OK");
             nazwaTextField.setEditable(false);
-            rocznikTextField.setEditable(false);
+            browarTextField.setEditable(false);
             krajTextField.setEditable(false);
             rodzajTextField.setEditable(false);
             alkoholTextField.setEditable(false);
-            regionTextField.setEditable(false);
-            apelacjaTextField.setEditable(false);
-            winnicaTextField.setEditable(false);
-            szczepyTextField.setEditable(false);
+            ekstraktTextField.setEditable(false);
+            chmielTextField.setEditable(false);
             opisTextField.setEditable(false);
             nazwaTextField.setBorder(null);
-            rocznikTextField.setBorder(null);
+            browarTextField.setBorder(null);
             krajTextField.setBorder(null);
             rodzajTextField.setBorder(null);
             alkoholTextField.setBorder(null);
-            regionTextField.setBorder(null);
-            apelacjaTextField.setBorder(null);
-            winnicaTextField.setBorder(null);
-            szczepyTextField.setBorder(null);
+            ekstraktTextField.setBorder(null);
+            chmielTextField.setBorder(null);
             opisTextField.setBorder(null);
         }
     }
@@ -60,54 +56,30 @@ public class SzczegolyWina extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        nazwaTextField = new javax.swing.JTextField();
-        rocznikTextField = new javax.swing.JTextField();
-        krajTextField = new javax.swing.JTextField();
-        alkoholTextField = new javax.swing.JTextField();
-        winnicaTextField = new javax.swing.JTextField();
-        szczepyTextField = new javax.swing.JTextField();
-        apelacjaTextField = new javax.swing.JTextField();
-        rodzajTextField = new javax.swing.JTextField();
-        regionTextField = new javax.swing.JTextField();
-        opisTextField = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         anulujButton = new javax.swing.JButton();
         wyczyscButton = new javax.swing.JButton();
         zatwierdzButton = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         errorLabel = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        krajTextField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        ekstraktTextField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        nazwaTextField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        browarTextField = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        alkoholTextField = new javax.swing.JTextField();
+        opisTextField = new javax.swing.JTextField();
+        chmielTextField = new javax.swing.JTextField();
+        rodzajTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        jLabel1.setText("*Nazwa:");
-
-        jLabel2.setText("*Rocznik:");
-
-        jLabel3.setText("*Kraj pochodzenia:");
-
-        jLabel4.setText("*Rodzaj wina:");
-
-        jLabel5.setText("Alkohol:");
-
-        jLabel6.setText("Region:");
-
-        jLabel7.setText("Apelacja:");
-
-        jLabel8.setText("Winnica:");
-
-        jLabel9.setText("Szczepy winogron:");
-
-        jLabel10.setText("Opis:");
 
         anulujButton.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         anulujButton.setText("Anuluj");
@@ -134,7 +106,7 @@ public class SzczegolyWina extends javax.swing.JDialog {
         });
 
         jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel11.setText("Edycja informacji o winie");
+        jLabel11.setText("Edycja informacji o piwie");
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel14.setText("Pola oznaczone * są wymagane!");
@@ -142,6 +114,22 @@ public class SzczegolyWina extends javax.swing.JDialog {
         errorLabel.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
         errorLabel.setForeground(new java.awt.Color(255, 0, 0));
         errorLabel.setText("errorLabel");
+
+        jLabel3.setText("*Kraj pochodzenia:");
+
+        jLabel2.setText("*Browar:");
+
+        jLabel4.setText("*Rodzaj piwa:");
+
+        jLabel5.setText("Alkohol:");
+
+        jLabel6.setText("Ekstrakt:");
+
+        jLabel7.setText("Gatunki chmielu:");
+
+        jLabel10.setText("Opis:");
+
+        jLabel1.setText("*Nazwa:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,64 +140,63 @@ public class SzczegolyWina extends javax.swing.JDialog {
                 .addComponent(jLabel11)
                 .addGap(94, 94, 94))
             .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(errorLabel)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(errorLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(wyczyscButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(anulujButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(zatwierdzButton)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(szczepyTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                                .addComponent(apelacjaTextField)
-                                .addComponent(regionTextField)
+                                .addComponent(chmielTextField)
                                 .addComponent(alkoholTextField)
+                                .addComponent(ekstraktTextField)
                                 .addComponent(rodzajTextField)
                                 .addComponent(krajTextField)
-                                .addComponent(rocznikTextField)
-                                .addComponent(nazwaTextField)
-                                .addComponent(winnicaTextField))
+                                .addComponent(browarTextField)
+                                .addComponent(nazwaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(opisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap())
+                        .addGap(41, 41, 41))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 38, Short.MAX_VALUE)
                         .addComponent(jLabel14)
-                        .addGap(41, 41, 41))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(wyczyscButton, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(anulujButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(zatwierdzButton)
-                .addContainerGap())
+                        .addGap(33, 33, 33))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel11)
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nazwaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(rocznikTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(browarTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -221,37 +208,25 @@ public class SzczegolyWina extends javax.swing.JDialog {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ekstraktTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(alkoholTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(regionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(apelacjaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chmielTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(winnicaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(szczepyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(opisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14)
-                        .addGap(0, 12, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(errorLabel)))
-                .addGap(15, 15, 15)
+                    .addComponent(jLabel10)
+                    .addComponent(opisTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(errorLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(wyczyscButton)
                     .addComponent(anulujButton)
@@ -273,14 +248,12 @@ public class SzczegolyWina extends javax.swing.JDialog {
 
     private void wyczyscButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wyczyscButtonActionPerformed
         nazwaTextField.setText("");
-        rocznikTextField.setText("");
+        browarTextField.setText("");
         krajTextField.setText("");
         rodzajTextField.setText("");
         alkoholTextField.setText("");
-        regionTextField.setText("");
-        apelacjaTextField.setText("");
-        winnicaTextField.setText("");
-        szczepyTextField.setText("");
+        ekstraktTextField.setText("");
+        chmielTextField.setText("");
         opisTextField.setText("");
     }//GEN-LAST:event_wyczyscButtonActionPerformed
 
@@ -291,7 +264,9 @@ public class SzczegolyWina extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField alkoholTextField;
     private javax.swing.JButton anulujButton;
-    private javax.swing.JTextField apelacjaTextField;
+    private javax.swing.JTextField browarTextField;
+    private javax.swing.JTextField chmielTextField;
+    private javax.swing.JTextField ekstraktTextField;
     private javax.swing.JLabel errorLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -303,16 +278,10 @@ public class SzczegolyWina extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField krajTextField;
     private javax.swing.JTextField nazwaTextField;
     private javax.swing.JTextField opisTextField;
-    private javax.swing.JTextField regionTextField;
-    private javax.swing.JTextField rocznikTextField;
     private javax.swing.JTextField rodzajTextField;
-    private javax.swing.JTextField szczepyTextField;
-    private javax.swing.JTextField winnicaTextField;
     private javax.swing.JButton wyczyscButton;
     private javax.swing.JButton zatwierdzButton;
     // End of variables declaration//GEN-END:variables

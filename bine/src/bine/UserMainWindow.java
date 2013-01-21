@@ -208,6 +208,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         jScrollPane2.setViewportView(tablicaPiwUzytkownika);
 
         szczegolyPiwaUseraButton.setText("Wyświetl szczegóły");
+        szczegolyPiwaUseraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                szczegolyPiwaUseraButtonActionPerformed(evt);
+            }
+        });
 
         usunPiwoUzytkownikaButton.setText("Usuń");
 
@@ -221,6 +226,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         });
 
         edytujPiwoUzytkownikaButton.setText("Edytuj");
+        edytujPiwoUzytkownikaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edytujPiwoUzytkownikaButtonActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel2.setText("Lista twoich piw");
@@ -355,6 +365,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         jScrollPane4.setViewportView(tablicaPiwGlobalnych);
 
         szczegolyPiwaGlobalnegoButton.setText("Wyświetl szczegóły");
+        szczegolyPiwaGlobalnegoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                szczegolyPiwaGlobalnegoButtonActionPerformed(evt);
+            }
+        });
 
         dodajEdytujOpinieOPiwieGlobalnymButton.setText("Dodaj opinię");
 
@@ -730,6 +745,21 @@ public final class UserMainWindow extends javax.swing.JFrame {
         okno.setVisible(true);
         //################DO MODYFIKACJII######################
     }//GEN-LAST:event_szczegolyWinaGlobalnegoButtonActionPerformed
+
+    private void edytujPiwoUzytkownikaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edytujPiwoUzytkownikaButtonActionPerformed
+        SzczegolyPiwa okno = new SzczegolyPiwa(this, true, true);
+        okno.setVisible(true);
+    }//GEN-LAST:event_edytujPiwoUzytkownikaButtonActionPerformed
+
+    private void szczegolyPiwaUseraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_szczegolyPiwaUseraButtonActionPerformed
+        SzczegolyPiwa okno = new SzczegolyPiwa(this, true, false);
+        okno.setVisible(true);
+    }//GEN-LAST:event_szczegolyPiwaUseraButtonActionPerformed
+
+    private void szczegolyPiwaGlobalnegoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_szczegolyPiwaGlobalnegoButtonActionPerformed
+        SzczegolyPiwa okno = new SzczegolyPiwa(this, true, false);
+        okno.setVisible(true);
+    }//GEN-LAST:event_szczegolyPiwaGlobalnegoButtonActionPerformed
 
     /**
      * @param args the command line arguments
