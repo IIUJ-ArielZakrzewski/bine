@@ -10,4 +10,13 @@ package bine;
  */
 public class SzczepWinogron {
     
+    String nazwa;
+    String opis;
+    
+    public SzczepWinogron(String nazwa, String opis)
+    {
+        this.nazwa = nazwa;
+        this.opis = opis;
+    }
+    
 }

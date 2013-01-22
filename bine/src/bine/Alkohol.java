@@ -10,4 +10,19 @@ package bine;
  */
 public class Alkohol {
     
+    String nazwa;
+    String kraj;
+    int alkohol;
+    String rodzaj;
+    String opis;
+    
+    public Alkohol(String name, String country, int alk, String genre, String description)
+    {
+        nazwa = name;
+        kraj = country;
+        alkohol = alk;
+        rodzaj = genre;
+        opis = description;
+    }
+    
 }

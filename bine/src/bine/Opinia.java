@@ -10,4 +10,17 @@ package bine;
  */
 public class Opinia {
     
+    String nazwa;
+    float ocena;
+    String komentarz;
+    String rodzaj;
+    
+    public Opinia(String name, float degree, String comment, String type)
+    {
+        nazwa = name;
+        ocena = degree;
+        komentarz = comment;
+        rodzaj = type;
+    }
+    
 }

@@ -8,6 +8,6 @@ package bine;
  *
  * @author Ariel
  */
-public class RodzajWina {
+public class RodzajPiwa {
     
 }

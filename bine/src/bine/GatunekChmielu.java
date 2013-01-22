@@ -10,4 +10,13 @@ package bine;
  */
 public class GatunekChmielu {
     
+    String nazwa;
+    String opis;
+    
+    public GatunekChmielu(String name, String description)
+    {
+        nazwa = name;
+        opis = description;
+    }
+    
 }
