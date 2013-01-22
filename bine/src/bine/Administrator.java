@@ -4,24 +4,27 @@
  */
 package bine;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  *
  * @author Ariel
  */
 public class Administrator extends Uzytkownik{
     
-    Wino[] winaGlobalne;
-    Piwo[] piwaGlobalne;
-    Uzytkownik[] uzytkownikcy;
     
-    public Administrator()
+    List<Uzytkownik> uzytkownicy;
+    
+    public Administrator(String imie, String nazwisko, String login, String kodPocztowy, String miasto, String ulica, int nrDomu, int nrLokalu)
     {
-        
+        super(imie, nazwisko, login, kodPocztowy, miasto, ulica, nrDomu, nrLokalu);
+        uzytkownicy = new LinkedList<>();
     }
     
     public void dodajChmiel(GatunekChmielu chmiel)
     {
-        
+        gatunkiChmielu.add(chmiel);
     }
     
     public void usunChmiel(String nazwa)
@@ -31,7 +34,7 @@ public class Administrator extends Uzytkownik{
     
     public void dodajSzczep(SzczepWinogron szczep)
     {
-        
+        szczepyWinogron.add(szczep);
     }
     
     public void usunSzczep(String nazwa)
@@ -41,7 +44,7 @@ public class Administrator extends Uzytkownik{
     
     public void dodajRodzaj(RodzajPiwa rodzaj)
     {
-        
+        rodzajePiwa.add(rodzaj);
     }
     
     public void usunRodzaj(String nazwa)
@@ -86,12 +89,12 @@ public class Administrator extends Uzytkownik{
     
     public void dodajWinoGlobalne(Wino wino)
     {
-        
+        winaGlobalne.add(wino);
     }
     
     public void dodajPiwoGlobalne(Piwo piwo)
     {
-        
+        piwaGlobalne.add(piwo);
     }
     
     public void usunWinoGlobalne(String nazwa)
