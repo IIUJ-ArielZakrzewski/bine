@@ -222,6 +222,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         usunPiwoUzytkownikaButton.setText("Usuń");
 
         dodajEdytujOpinieOPiwieUseraButton.setText("Dodaj opinię");
+        dodajEdytujOpinieOPiwieUseraButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajEdytujOpinieOPiwieUseraButtonActionPerformed(evt);
+            }
+        });
 
         dodajPiwoUzytkownikaButton.setText("Dodaj nowe piwo");
         dodajPiwoUzytkownikaButton.addActionListener(new java.awt.event.ActionListener() {
@@ -382,6 +387,11 @@ public final class UserMainWindow extends javax.swing.JFrame {
         });
 
         dodajEdytujOpinieOPiwieGlobalnymButton.setText("Dodaj opinię");
+        dodajEdytujOpinieOPiwieGlobalnymButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dodajEdytujOpinieOPiwieGlobalnymButtonActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel4.setText("Lista piw w globalnej bazie");
@@ -515,8 +525,18 @@ public final class UserMainWindow extends javax.swing.JFrame {
         jScrollPane6.setViewportView(tablicaOpiniiOPiwach);
 
         edytujOpinieOPiwieButton.setText("Edytuj");
+        edytujOpinieOPiwieButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                edytujOpinieOPiwieButtonActionPerformed(evt);
+            }
+        });
 
         szczegolyOpiniiOPiwieButton.setText("Wyświetl szczegóły");
+        szczegolyOpiniiOPiwieButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                szczegolyOpiniiOPiwieButtonActionPerformed(evt);
+            }
+        });
 
         usunOpinieOWinieButton1.setText("Usuń");
 
@@ -800,6 +820,26 @@ public final class UserMainWindow extends javax.swing.JFrame {
         AddEditViewOpiniaWino okno = new AddEditViewOpiniaWino(this, true, 1);
         okno.setVisible(true);
     }//GEN-LAST:event_edytujOpinieOWinieButtonActionPerformed
+
+    private void dodajEdytujOpinieOPiwieUseraButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajEdytujOpinieOPiwieUseraButtonActionPerformed
+        AddEditViewOpiniaPiwo okno = new AddEditViewOpiniaPiwo(this, true, 0);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajEdytujOpinieOPiwieUseraButtonActionPerformed
+
+    private void dodajEdytujOpinieOPiwieGlobalnymButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dodajEdytujOpinieOPiwieGlobalnymButtonActionPerformed
+        AddEditViewOpiniaPiwo okno = new AddEditViewOpiniaPiwo(this, true, 0);
+        okno.setVisible(true);
+    }//GEN-LAST:event_dodajEdytujOpinieOPiwieGlobalnymButtonActionPerformed
+
+    private void szczegolyOpiniiOPiwieButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_szczegolyOpiniiOPiwieButtonActionPerformed
+        AddEditViewOpiniaPiwo okno = new AddEditViewOpiniaPiwo(this, true, 2);
+        okno.setVisible(true);
+    }//GEN-LAST:event_szczegolyOpiniiOPiwieButtonActionPerformed
+
+    private void edytujOpinieOPiwieButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edytujOpinieOPiwieButtonActionPerformed
+        AddEditViewOpiniaPiwo okno = new AddEditViewOpiniaPiwo(this, true, 1);
+        okno.setVisible(true);
+    }//GEN-LAST:event_edytujOpinieOPiwieButtonActionPerformed
 
     /**
      * @param args the command line arguments

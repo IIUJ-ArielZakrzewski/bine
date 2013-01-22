@@ -449,6 +449,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj opini&#x119;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dodajEdytujOpinieOPiwieUseraButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="dodajPiwoUzytkownikaButton">
               <Properties>
@@ -702,6 +705,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dodaj opini&#x119;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dodajEdytujOpinieOPiwieGlobalnymButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
@@ -942,11 +948,17 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Edytuj"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edytujOpinieOPiwieButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="szczegolyOpiniiOPiwieButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wy&#x15b;wietl szczeg&#xf3;&#x142;y"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="szczegolyOpiniiOPiwieButtonActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="usunOpinieOWinieButton1">
               <Properties>
